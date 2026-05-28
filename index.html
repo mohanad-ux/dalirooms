@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dali rooms - A sanctuary of bespoke luxury overlooking the infinite blue of the Ionian Sea in Zakynthos, Greece.">
+    <meta name="theme-color" content="#002855">
+    
+    <!-- Open Graph SEO Tags -->
+    <meta property="og:title" content="Dali rooms | Luxury Stay in Zakynthos">
+    <meta property="og:description" content="Experience Paradise at Dali rooms. Bespoke luxury and breathtaking views of the Ionian Sea.">
+    <meta property="og:image" content="https://i.postimg.cc/prFDtVZR/214871426.jpg">
+    <meta property="og:url" content="https://www.dalitours-zakynthos.com/">
+    <meta property="og:type" content="website">
+
+    <title>Dali rooms | Luxury Stay in Zakynthos</title>
+    
+    <!-- Favicon Placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* --- CSS VARIABLES --- */
+        :root {
+            --primary-blue: #002855;
+            --accent-turquoise: #00A8B5;
+            --accent-gold: #D4AF37;
+            --bg-white: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #F4F4F4;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* --- RESET & GLOBAL --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .section-padding {
+            padding: 100px 5%;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-gold);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: none;
+            outline: none;
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-gold:hover {
+            background-color: #b5952f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-gold);
+            color: #fff;
+        }
+
+        /* --- ANIMATIONS (Scroll Fade-in) --- */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 5%;
+            transition: var(--transition-smooth);
+            background: rgba(0, 40, 85, 0.1); /* Slight dark tint initially */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 5%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-bottom: none;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header.scrolled .logo {
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        header.scrolled .nav-links li a {
+            color: var(--primary-blue);
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        /* Language & Menu Controls container */
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Premium Language selector capsule style */
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        header.scrolled .lang-selector {
+            color: var(--primary-blue);
+            border-color: rgba(0, 40, 85, 0.15);
+            background: rgba(0, 40, 85, 0.02);
+        }
+
+        .lang-opt {
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            opacity: 0.6;
+        }
+
+        .lang-opt.active, .lang-opt:hover {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .lang-divider {
+            opacity: 0.25;
+            font-weight: 300;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        header.scrolled .mobile-menu-btn {
+            color: var(--primary-blue);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 40, 85, 0.6), rgba(0, 0, 0, 0.4));
+            z-index: 2;
+        }
+
+        #waterCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            pointer-events: none; /* Let clicks pass through */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about {
+            background-color: var(--bg-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,40,85,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* --- ROOMS SECTION --- */
+        .rooms {
+            background-color: #FAFAFA;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .room-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,40,85,0.15);
+        }
+
+        .room-img-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .room-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .room-card:hover .room-img-container img {
+            transform: scale(1.1);
+        }
+
+        .room-price-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .room-content {
+            padding: 30px;
+        }
+
+        .room-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .room-amenities {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: var(--accent-turquoise);
+            font-size: 1.1rem;
+        }
+
+        .room-content p {
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        /* --- AMENITIES SECTION --- */
+        .amenities {
+            background-color: var(--primary-blue);
+            color: #fff;
+        }
+        
+        .amenities .section-title {
+            color: #fff;
+        }
+        
+        .amenities .section-subtitle {
+            color: #ccc;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Balanced for the 3 premium experiences */
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .amenity-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .amenity-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent-gold);
+        }
+
+        .amenity-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .amenity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .amenity-card:hover .amenity-img img {
+            transform: scale(1.05);
+        }
+
+        .amenity-content {
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .amenity-content h3 {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .amenity-content p {
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+
+        /* --- GALLERY SECTION --- */
+        .gallery {
+            background: #FAFAFA;
+        }
+
+        /* Premium Interactive Gallery filter style */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 0 auto 35px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(0, 40, 85, 0.15);
+            color: var(--primary-blue);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-gold);
+            color: #fff;
+            border-color: var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .gallery-item.hidden {
+            display: none;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 40, 85, 0.4);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-overlay i {
+            color: #fff;
+            font-size: 2rem;
+            transform: scale(0);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .gallery-overlay i {
+            transform: scale(1);
+        }
+
+        /* --- CONTACT & MAP SECTION --- */
+        .contact-section {
+            background: var(--bg-white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            background: #FAFAFA;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        }
+
+        .contact-info h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            color: var(--accent-turquoise);
+            font-size: 1.5rem;
+            margin-top: 3px;
+        }
+
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a, .contact-item p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-gold);
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,40,85,0.1);
+        }
+
+        /* --- FOOTER CTA BANNER --- */
+        .footer-cta {
+            background: linear-gradient(rgba(0, 40, 85, 0.8), rgba(0, 40, 85, 0.9)), url('https://i.postimg.cc/prFDtVZR/214871426.jpg') center/cover fixed;
+            padding: 80px 5%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .footer-cta h2 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #00152D; /* Darker Blue */
+            color: #ccc;
+            padding: 60px 5% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            color: #fff;
+            transition: var(--transition-smooth);
+        }
+
+        .social-icons a:hover {
+            background: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        /* --- WHATSAPP FLOATING BUTTON --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: pulse-wa 2s infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* --- AI CONCIERGE WIDGET --- */
+        .ai-widget-container {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+
+        .ai-toggle-btn {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-blue);
+            color: var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            position: relative;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .ai-toggle-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .ai-tooltip {
+            position: absolute;
+            left: 75px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--bg-white);
+            color: var(--primary-blue);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            pointer-events: none;
+            border: 1px solid rgba(0,40,85,0.1);
+            animation: float-tooltip 3s infinite ease-in-out;
+        }
+
+        @keyframes float-tooltip {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(5px); }
+        }
+
+        .ai-chat-window {
+            position: absolute;
+            bottom: 80px;
+            left: 0;
+            width: 320px;
+            background: var(--bg-white);
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            transform-origin: bottom left;
+            transform: scale(0);
+            opacity: 0;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .ai-chat-window.open {
+            display: flex;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .chat-header {
+            background: var(--primary-blue);
+            color: var(--bg-white);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        .chat-header h4 {
+            color: var(--bg-white);
+            margin: 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .close-chat {
+            cursor: pointer;
+            color: var(--accent-gold);
+            transition: color 0.3s ease;
+        }
+
+        .close-chat:hover {
+            color: #fff;
+        }
+
+        .chat-body {
+            padding: 20px;
+            height: 300px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #FAFAFA;
+        }
+
+        .chat-msg {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        .chat-msg.ai {
+            background: #E8F0F8;
+            color: var(--primary-blue);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        .chat-msg.user {
+            background: var(--primary-blue);
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-input-container {
+            display: flex;
+            padding: 12px;
+            background: #FFFFFF;
+            border-top: 1px solid rgba(0, 40, 85, 0.1);
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chat-input-container input {
+            flex: 1;
+            border: 1px solid rgba(0, 40, 85, 0.15);
+            border-radius: 20px;
+            padding: 8px 14px;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            outline: none;
+            transition: var(--transition-smooth);
+        }
+
+        .chat-input-container input:focus {
+            border-color: var(--accent-gold);
+        }
+
+        .chat-input-container button {
+            background: var(--primary-blue);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            flex-shrink: 0;
+        }
+
+        .chat-input-container button:hover {
+            background: var(--accent-gold);
+            color: #fff;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 1024px) {
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-grid, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background: var(--bg-white);
+                flex-direction: column;
+                justify-content: center;
+                padding: 50px 20px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.4s ease;
+            }
+            .nav-links.active {
+                right: 0;
+            }
+            .nav-links li {
+                margin: 10px 0;
+            }
+            .nav-links li a {
+                color: var(--primary-blue);
+                font-size: 1.2rem;
+            }
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001;
+            }
+            header.scrolled .mobile-menu-btn.active {
+                color: var(--primary-blue);
+            }
+            .mobile-menu-btn.active {
+                color: var(--primary-blue);
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .rooms-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-container {
+                padding: 30px 20px;
+            }
+            .ai-chat-window {
+                width: 280px;
+            }
+            .lang-selector {
+                padding: 4px 8px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/306974819837?text=Hello%20Dali%20rooms,%20I%20would%20like%20to%20inquire%20about%20a%20reservation." class="whatsapp-float" id="waFloatBtn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- AI Concierge Widget (Upgraded Free-Text Architecture) -->
+    <div class="ai-widget-container">
+        <div class="ai-toggle-btn" id="aiToggleBtn">
+            <i class="fas fa-robot"></i>
+            <div class="ai-tooltip" data-i18n="ai_widget_tooltip">AI Concierge - Online</div>
+        </div>
+
+        <div class="ai-chat-window" id="aiChatWindow">
+            <div class="chat-header">
+                <h4><i class="fas fa-concierge-bell"></i> <span data-i18n="ai_widget_title">AI Concierge</span></h4>
+                <i class="fas fa-times close-chat" id="aiCloseBtn"></i>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-msg ai" id="welcomeMessage" data-i18n="ai_welcome">
+                    Welcome to Dali rooms! 🌟 I am your AI Virtual Concierge. How can I assist you today?
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSendBtn" aria-label="Send Message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">DALI ROOMS</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#rooms" data-i18n="nav_rooms">Rooms</a></li>
+                <li><a href="#amenities" data-i18n="nav_amenities">Amenities</a></li>
+                <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+                <li><a href="#location" data-i18n="nav_location">Location</a></li>
+                <li>
+                    <!-- External Booking CTA -->
+                    <a href="https://www.booking.com/hotel/gr/dali.html?label=gem131js-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ar6s1tAGwAIB0gIkNDVlYmQ0NzQtMjA2NS00NzIxLThhZTQtMjllNmJjMzUxZmFl2AIB4AIB&aid=2440493&ucfs=1&checkin=2026-06-09&checkout=2026-06-13&dest_id=1663&dest_type=region&group_adults=2&no_rooms=1&group_children=0&srpvid=be9c59e5df9526ea&srepoch=1779799679&matching_block_id=63214802_93769161_2_2_0_775335&atlas_src=sr_iw_title" class="btn btn-gold" target="_blank" rel="noopener noreferrer" data-i18n="nav_book_now">Book Now</a>
+                </li>
+            </ul>
+            <div class="header-controls">
+                <!-- Premium Minimalist Language Capsule selector -->
+                <div class="lang-selector">
+                    <span class="lang-opt active" data-lang-btn="en" onclick="setLanguage('en')">EN</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-opt" data-lang-btn="de" onclick="setLanguage('de')">DE</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-opt" data-lang-btn="zh" onclick="setLanguage('zh')">ZH</span>
+                </div>
+                <div class="mobile-menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="https://i.postimg.cc/prFDtVZR/214871426.jpg" alt="Dali rooms Luxury Interior" class="hero-bg" loading="lazy">
+        <div class="hero-overlay"></div>
+        
+        <!-- Interactive Canvas Background -->
+        <canvas id="waterCanvas"></canvas>
+
+        <div class="hero-content">
+            <h1 data-i18n="hero_title">Experience Paradise at Dali rooms</h1>
+            <p data-i18n="hero_subtitle">A sanctuary of bespoke luxury overlooking the infinite blue of the Ionian Sea.</p>
+            <a href="https://www.booking.com/hotel/gr/dali.html?label=gem131js-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ar6s1tAGwAIB0gIkNDVlYmQ0NzQtMjA2NS00NzIxLThhZTQtMjllNmJjMzUxZmFl2AIB4AIB&aid=2440493&ucfs=1&checkin=2026-06-09&checkout=2026-06-13&dest_id=1663&dest_type=region&group_adults=2&no_rooms=1&group_children=0&srpvid=be9c59e5df9526ea&srepoch=1779799679&matching_block_id=63214802_93769161_2_2_0_775335&atlas_src=sr_iw_title" class="btn btn-gold" target="_blank" rel="noopener noreferrer" data-i18n="hero_cta">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container about-grid">
+            <div class="about-text fade-up">
+                <div class="section-title" data-i18n="about_title">The Art of Hospitality</div>
+                <h2 data-i18n="about_subtitle">A refined escape in Zakynthos</h2>
+                <p data-i18n="about_p1">Immerse yourself in the unparalleled beauty of the Mediterranean. Dali rooms offers an exclusive retreat designed for those who seek perfection. Our meticulously crafted spaces blend contemporary luxury with the timeless charm of Greek island life.</p>
+                <p data-i18n="about_p2">Wake up to the gentle sound of the waves, indulge in world-class amenities, and let the breathtaking views of the Ionian Sea become the backdrop to your unforgettable memories. Here, every detail is tailored to your supreme comfort.</p>
+            </div>
+            <div class="about-image fade-up">
+                <img src="https://i.postimg.cc/Dz3zZ8mY/2014-03-19-4621.jpg" alt="Dali rooms exterior view" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms section-padding">
+        <div class="container">
+            <div class="text-center fade-up">
+                <h2 class="section-title" data-i18n="rooms_title">Luxury Accommodations</h2>
+                <p class="section-subtitle" data-i18n="rooms_subtitle">Discover our exclusive selection of suites and villas, each presenting a perfect harmony of elegance, comfort, and panoramic vistas.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 (Grand Luxury Suite) -->
+                <div class="room-card fade-up">
+                    <div class="room-img-container">
+                        <img src="https://i.postimg.cc/prFDtVZR/214871426.jpg" alt="Grand Luxury Suite" loading="lazy">
+                        <div class="room-price-tag" data-i18n="room_tag_premium">Premium</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 data-i18n="room1_title">Grand Luxury Suite</h3>
+                        <div class="room-amenities">
+                            <i class="fas fa-wifi" title="Free Wi-Fi"></i>
+                            <i class="fas fa-snowflake" title="Air Conditioning"></i>
+                            <i class="fas fa-tv" title="Smart TV"></i>
+                            <i class="fas fa-concierge-bell" title="Room Service"></i>
+                        </div>
+                        <p data-i18n="room1_desc">An expansive sanctuary featuring designer furnishings, a king-size plush bed, and a private balcony capturing the majestic morning sun over the azure waters.</p>
+                        <a href="https://www.booking.com/hotel/gr/dali.html?label=gem131js-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ar6s1tAGwAIB0gIkNDVlYmQ0NzQtMjA2NS00NzIxLThhZTQtMjllNmJjMzUxZmFl2AIB4AIB&aid=2440493&ucfs=1&checkin=2026-06-09&checkout=2026-06-13&dest_id=1663&dest_type=region&group_adults=2&no_rooms=1&group_children=0&srpvid=be9c59e5df9526ea&srepoch=1779799679&matching_block_id=63214802_93769161_2_2_0_775335&atlas_src=sr_iw_title" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="room_book">Book on Booking.com</a>
+                    </div>
+                </div>
+
+                <!-- Room 2 (Executive Sea-View Villa) -->
+                <div class="room-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="room-img-container">
+                        <img src="https://i.postimg.cc/QNkk8Cgg/DSC-7335.jpg" alt="Executive Sea-View" loading="lazy">
+                        <div class="room-price-tag" data-i18n="room_tag_exclusive">Exclusive</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 data-i18n="room2_title">Executive Sea-View</h3>
+                        <div class="room-amenities">
+                            <i class="fas fa-water" title="Sea View"></i>
+                            <i class="fas fa-coffee" title="Espresso Machine"></i>
+                            <i class="fas fa-hot-tub" title="Jacuzzi"></i>
+                            <i class="fas fa-wine-glass" title="Mini Bar"></i>
+                        </div>
+                        <p data-i18n="room2_desc">Elevate your stay in this executive space offering unparalleled privacy, featuring premium textures, state-of-the-art tech, and a spa-inspired ensuite bathroom.</p>
+                        <a href="https://www.booking.com/hotel/gr/dali.html?label=gem131js-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ar6s1tAGwAIB0gIkNDVlYmQ0NzQtMjA2NS00NzIxLThhZTQtMjllNmJjMzUxZmFl2AIB4AIB&aid=2440493&ucfs=1&checkin=2026-06-09&checkout=2026-06-13&dest_id=1663&dest_type=region&group_adults=2&no_rooms=1&group_children=0&srpvid=be9c59e5df9526ea&srepoch=1779799679&matching_block_id=63214802_93769161_2_2_0_775335&atlas_src=sr_iw_title" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="room_book">Book on Booking.com</a>
+                    </div>
+                </div>
+
+                <!-- Room 3 (Private Infinity Pool Oasis) -->
+                <div class="room-card fade-up" style="transition-delay: 0.4s;">
+                    <div class="room-img-container">
+                        <img src="https://i.postimg.cc/gjZvPcD9/216273385.jpg" alt="Infinity Pool Oasis" loading="lazy">
+                        <div class="room-price-tag" data-i18n="room_tag_signature">Signature</div>
+                    </div>
+                    <div class="room-content">
+                        <h3 data-i18n="room3_title">Infinity Pool Oasis</h3>
+                        <div class="room-amenities">
+                            <i class="fas fa-swimmer" title="Private Pool"></i>
+                            <i class="fas fa-spa" title="Spa Access"></i>
+                            <i class="fas fa-bed" title="King Bed"></i>
+                            <i class="fas fa-cocktail" title="Welcome Drinks"></i>
+                        </div>
+                        <p data-i18n="room3_desc">The crown jewel of Dali rooms. Step straight from your luxurious bedroom onto a pristine sun deck featuring a mesmerizing infinity plunge pool merging with the sea horizon.</p>
+                        <a href="https://www.booking.com/hotel/gr/dali.html?label=gem131js-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ar6s1tAGwAIB0gIkNDVlYmQ0NzQtMjA2NS00NzIxLThhZTQtMjllNmJjMzUxZmFl2AIB4AIB&aid=2440493&ucfs=1&checkin=2026-06-09&checkout=2026-06-13&dest_id=1663&dest_type=region&group_adults=2&no_rooms=1&group_children=0&srpvid=be9c59e5df9526ea&srepoch=1779799679&matching_block_id=63214802_93769161_2_2_0_775335&atlas_src=sr_iw_title" class="btn btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="room_book">Book on Booking.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities section-padding">
+        <div class="container">
+            <div class="text-center fade-up">
+                <h2 class="section-title" data-i18n="amenities_title">Premium Experiences</h2>
+                <p class="section-subtitle" data-i18n="amenities_subtitle">Beyond the refined elegance of your room, we invite you to indulge in a curated selection of world-class facilities designed for ultimate relaxation and joy.</p>
+            </div>
+
+            <div class="amenities-grid">
+                <!-- Amenity 1 (Fine Dining) -->
+                <div class="amenity-card fade-up">
+                    <div class="amenity-img">
+                        <img src="https://i.postimg.cc/5tV8WMYV/216273359.jpg" alt="Fine Dining" loading="lazy">
+                    </div>
+                    <div class="amenity-content">
+                        <h3 data-i18n="amenity1_title">Gastronomic Dining</h3>
+                        <p data-i18n="amenity1_desc">Savor exquisite Mediterranean flavors crafted by our award-winning executive chefs.</p>
+                    </div>
+                </div>
+                <!-- Amenity 2 (Yacht Tours) -->
+                <div class="amenity-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="amenity-img">
+                        <img src="https://i.postimg.cc/76rsRcDH/luxury-yacht-cruises-zakynthos-private-cruises-ionian-sea-greece.webp" alt="Yacht Tours" loading="lazy">
+                    </div>
+                    <div class="amenity-content">
+                        <h3 data-i18n="amenity2_title">Private Yacht Tours</h3>
+                        <p data-i18n="amenity2_desc">Explore the hidden coves and pristine beaches of Zakynthos aboard our private yachts.</p>
+                    </div>
+                </div>
+                <!-- Amenity 3 (Infinity Lounge) -->
+                <div class="amenity-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="amenity-img">
+                        <img src="https://i.postimg.cc/pLX9tYRQ/DSC-6977.jpg" alt="Infinity Lounge" loading="lazy">
+                    </div>
+                    <div class="amenity-content">
+                        <h3>Infinity Lounge</h3>
+                        <p data-i18n="amenity3_desc">Sip signature cocktails as you witness the most magnificent sunsets over the Ionian Sea.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exclusive Photo Gallery -->
+    <section id="gallery" class="gallery section-padding">
+        <div class="container">
+            <div class="text-center fade-up">
+                <h2 class="section-title" data-i18n="gallery_title">Visual Journey</h2>
+                <p class="section-subtitle" data-i18n="gallery_subtitle">Glimpse into the exquisite aesthetics and atmosphere that await you at Dali rooms.</p>
+            </div>
+
+            <!-- Premium Interactive Gallery Filters -->
+            <div class="gallery-filters fade-up">
+                <button class="filter-btn active" data-filter="all" data-i18n="gallery_all">All</button>
+                <button class="filter-btn" data-filter="rooms" data-i18n="gallery_rooms">Rooms</button>
+                <button class="filter-btn" data-filter="facilities" data-i18n="gallery_facilities">Facilities</button>
+                <button class="filter-btn" data-filter="views" data-i18n="gallery_views">Views</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Room Images Category (8 elements) -->
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/prFDtVZR/214871426.jpg" alt="Luxury Room View 1" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/sxhpRfcj/214872180.jpg" alt="Luxury Room View 2" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/gjZvPcD9/216273385.jpg" alt="Luxury Room View 3" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/vTVWd8zd/216273394.jpg" alt="Luxury Room View 4" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/QCTprNbN/216273403.jpg" alt="Luxury Room View 5" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/KjMnycNh/216273422-(1).jpg" alt="Luxury Room View 6" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/prFDtVZx/216273442.jpg" alt="Luxury Room View 7" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="rooms"><img src="https://i.postimg.cc/d3y8KQBF/DSC-7337.jpg" alt="Luxury Room View 8" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+
+                <!-- Facilities Images Category (6 elements) -->
+                <div class="gallery-item fade-up" data-category="facilities"><img src="https://i.postimg.cc/fTFR9jDP/170277302.jpg" alt="Luxury Facility View 1" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="facilities"><img src="https://i.postimg.cc/dtXVymw4/2014-04-23-4877.jpg" alt="Luxury Facility View 2" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="facilities"><img src="https://i.postimg.cc/8P3z6BNm/214871422.jpg" alt="Luxury Facility View 3" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="facilities"><img src="https://i.postimg.cc/dtXVymwW/214872182.jpg" alt="Luxury Facility View 4" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="facilities"><img src="https://i.postimg.cc/L6781B2z/214872737.jpg" alt="Luxury Facility View 5" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="facilities"><img src="https://i.postimg.cc/c4jLnM0c/216273445.jpg" alt="Luxury Facility View 6" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+
+                <!-- Panoramic Views Images Category (8 elements) -->
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/y8gWQpvt/170271950.jpg" alt="Panoramic Resort View 1" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/0yMrWXVv/170271954.jpg" alt="Panoramic Resort View 2" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/qvhgbD1V/214872732.jpg" alt="Panoramic Resort View 3" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/YCGjnDdH/214873721.jpg" alt="Panoramic Resort View 4" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/pLhyGcq3/25769861.jpg" alt="Panoramic Resort View 5" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/6p2TjbYS/41910665.jpg" alt="Panoramic Resort View 6" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/x1Jqxp6r/DSC-6977.jpg" alt="Panoramic Resort View 7" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item fade-up" data-category="views"><img src="https://i.postimg.cc/t4Z7SvBq/DSC-6985.jpg" alt="Panoramic Resort View 8" loading="lazy"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Info & Interactive Map Section -->
+    <section id="location" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-container fade-up">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3 data-i18n="contact_title">Get in Touch</h3>
+                    <p data-i18n="contact_desc">Whether you're ready to secure your reservation or require bespoke arrangements for your stay, our dedicated concierge team is at your disposal.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4 data-i18n="contact_loc">Our Location</h4>
+                                <p>Lomvardou 20<br>Zakinthos 291 00, Greece</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4 data-i18n="contact_email_header">Email Us</h4>
+                                <a href="mailto:georgia@dalitours-zakynthos.com">georgia@dalitours-zakynthos.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4 data-i18n="contact_phone_header">WhatsApp / Phone</h4>
+                                <a id="waContactLink" href="https://wa.me/306974819837?text=Hello%20Dali%20rooms,%20I%20would%20like%20to%20inquire%20about%20a%20reservation." target="_blank" rel="noopener noreferrer"><span id="waContactDisplay">+30 697 481 9837</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="map-wrapper">
+                    <!-- Google Maps Iframe pointing precisely to Lomvardou 20, Zakynthos -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.077672288126!2d20.8996567156942!3d37.78825127975661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13673ff558e8e7a7%3A0xc4f9b8c0c4b8b8b8!2sLomvardou%2020%2C%20Zakinthos%20291%2000%2C%20Greece!5e0!3m2!1sen!2sus!4v1689234567890!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Call To Action Banner -->
+    <section class="footer-cta">
+        <div class="container fade-up">
+            <h2 data-i18n="footer_cta_title">Your Mediterranean Sanctuary Awaits</h2>
+            <p data-i18n="footer_cta_desc">Experience the epitome of luxury and flawless hospitality on Zakynthos Island.</p>
+            <a href="https://www.booking.com/hotel/gr/dali.html?label=gem131js-10CAEoggI46AdIM1gDaFyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4Ar6s1tAGwAIB0gIkNDVlYmQ0NzQtMjA2NS00NzIxLThhZTQtMjllNmJjMzUxZmFl2AIB4AIB&aid=2440493&ucfs=1&checkin=2026-06-09&checkout=2026-06-13&dest_id=1663&dest_type=region&group_adults=2&no_rooms=1&group_children=0&srpvid=be9c59e5df9526ea&srepoch=1779799679&matching_block_id=63214802_93769161_2_2_0_775335&atlas_src=sr_iw_title" class="btn btn-gold" target="_blank" rel="noopener noreferrer" data-i18n="footer_cta_btn">Secure Your Room via Booking.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo">DALI ROOMS</span>
+                    <p data-i18n="footer_brand_desc">Elevating island hospitality to an art form. Join us in Zakynthos for a luxury experience defined by serenity, elegance, and infinite ocean vistas.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a id="waFooterLink" href="https://wa.me/306974819837" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-i18n="footer_links_header">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About</a></li>
+                        <li><a href="#rooms" data-i18n="nav_rooms">Rooms</a></li>
+                        <li><a href="#amenities" data-i18n="nav_amenities">Amenities</a></li>
+                        <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 data-i18n="footer_contact_header">Contact</h4>
+                    <ul>
+                        <li>Lomvardou 20, Zakinthos 29100</li>
+                        <li>Greece</li>
+                        <li><a href="mailto:georgia@dalitours-zakynthos.com">georgia@dalitours-zakynthos.com</a></li>
+                        <li><a id="waFooterListLink" href="https://wa.me/306974819837" target="_blank" rel="noopener noreferrer"><span id="waFooterListDisplay">+30 697 481 9837</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 Dali rooms Zakynthos. All Rights Reserved.</p>
+                <p><a href="#" data-i18n="footer_privacy">Privacy Policy</a> | <a href="#" data-i18n="footer_terms">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- MULTI-LANGUAGE TRANSLATION MATRIX ---
+        let currentLang = 'en';
+
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_rooms: "Rooms",
+                nav_amenities: "Amenities",
+                nav_gallery: "Gallery",
+                nav_location: "Location",
+                nav_book_now: "Book Now",
+                
+                hero_title: "Experience Paradise at Dali rooms",
+                hero_subtitle: "A sanctuary of bespoke luxury overlooking the infinite blue of the Ionian Sea.",
+                hero_cta: "Book Your Stay",
+                
+                about_title: "The Art of Hospitality",
+                about_subtitle: "A refined escape in Zakynthos",
+                about_p1: "Immerse yourself in the unparalleled beauty of the Mediterranean. Dali rooms offers an exclusive retreat designed for those who seek perfection. Our meticulously crafted spaces blend contemporary luxury with the timeless charm of Greek island life.",
+                about_p2: "Wake up to the gentle sound of the waves, indulge in world-class amenities, and let the breathtaking views of the Ionian Sea become the backdrop to your unforgettable memories. Here, every detail is tailored to your supreme comfort.",
+                
+                rooms_title: "Luxury Accommodations",
+                rooms_subtitle: "Discover our exclusive selection of suites and villas, each presenting a perfect harmony of elegance, comfort, and panoramic vistas.",
+                room_tag_premium: "Premium",
+                room_tag_exclusive: "Exclusive",
+                room_tag_signature: "Signature",
+                room1_title: "Grand Luxury Suite",
+                room1_desc: "An expansive sanctuary featuring designer furnishings, a king-size plush bed, and a private balcony capturing the majestic morning sun over the azure waters.",
+                room2_title: "Executive Sea-View",
+                room2_desc: "Elevate your stay in this executive space offering unparalleled privacy, featuring premium textures, state-of-the-art tech, and a spa-inspired ensuite bathroom.",
+                room3_title: "Infinity Pool Oasis",
+                room3_desc: "The crown jewel of Dali rooms. Step straight from your luxurious bedroom onto a pristine sun deck featuring a mesmerizing infinity plunge pool merging with the sea horizon.",
+                room_book: "Book on Booking.com",
+                
+                amenities_title: "Premium Experiences",
+                amenities_subtitle: "Beyond the refined elegance of your room, we invite you to indulge in a curated selection of world-class facilities designed for ultimate relaxation and joy.",
+                amenity1_title: "Gastronomic Dining",
+                amenity1_desc: "Savor exquisite Mediterranean flavors crafted by our award-winning executive chefs.",
+                amenity2_title: "Private Yacht Tours",
+                amenity2_desc: "Explore the hidden coves and pristine beaches of Zakynthos aboard our private yachts.",
+                amenity3_title: "Infinity Lounge",
+                amenity3_desc: "Sip signature cocktails as you witness the most magnificent sunsets over the Ionian Sea.",
+                
+                gallery_title: "Visual Journey",
+                gallery_subtitle: "Glimpse into the exquisite aesthetics and atmosphere that await you at Dali rooms.",
+                gallery_all: "All",
+                gallery_rooms: "Rooms",
+                gallery_facilities: "Facilities",
+                gallery_views: "Views",
+                
+                contact_title: "Get in Touch",
+                contact_desc: "Whether you're ready to secure your reservation or require bespoke arrangements for your stay, our dedicated concierge team is at your disposal.",
+                contact_loc: "Our Location",
+                contact_email_header: "Email Us",
+                contact_phone_header: "WhatsApp / Phone",
+                
+                footer_cta_title: "Your Mediterranean Sanctuary Awaits",
+                footer_cta_desc: "Experience the epitome of luxury and flawless hospitality on Zakynthos Island.",
+                footer_cta_btn: "Secure Your Room via Booking.com",
+                footer_brand_desc: "Elevating island hospitality to an art form. Join us in Zakynthos for a luxury experience defined by serenity, elegance, and infinite ocean vistas.",
+                footer_links_header: "Quick Links",
+                footer_contact_header: "Contact",
+                footer_copyright: "&copy; 2026 Dali rooms Zakynthos. All Rights Reserved.",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Service",
+
+                ai_widget_tooltip: "AI Concierge - Online",
+                ai_widget_title: "AI Concierge",
+                ai_welcome: "Welcome to Dali rooms! 🌟 I am your AI Virtual Concierge. How can I assist you today?"
+            },
+            de: {
+                nav_home: "Startseite",
+                nav_about: "Über uns",
+                nav_rooms: "Zimmer",
+                nav_amenities: "Annehmlichkeiten",
+                nav_gallery: "Galerie",
+                nav_location: "Lage",
+                nav_book_now: "Jetzt Buchen",
+                
+                hero_title: "Erleben Sie das Paradies im Dali rooms",
+                hero_subtitle: "Ein Zufluchtsort maßgeschneiderten Luxus mit Blick auf das unendliche Blau des Ionischen Meeres.",
+                hero_cta: "Buchen Sie Ihren Aufenthalt",
+                
+                about_title: "Die Kunst der Gastfreundschaft",
+                about_subtitle: "Ein erlesener Rückzugsort auf Zakynthos",
+                about_p1: "Tauchen Sie ein in die unvergleichliche Schönheit des Mittelmeers. Dali rooms bietet einen exklusiven Rückzugsort für diejenigen, die Perfektion suchen. Unsere sorgfältig gestalteten Räume verbinden zeitgenössischen Luxus mit dem zeitlosen Charme des griechischen Insellebens.",
+                about_p2: "Wachen Sie mit dem sanften Rauschen der Wellen auf, genießen Sie erstklassige Annehmlichkeiten und lassen Sie die atemberaubende Aussicht auf das Ionische Meer zur Kulisse Ihrer unvergesslichen Erinnerungen werden. Hier ist jedes Detail auf Ihren höchsten Komfort abgestimmt.",
+                
+                rooms_title: "Luxuriöse Unterkünfte",
+                rooms_subtitle: "Entdecken Sie unsere exklusive Auswahl an Suiten und Villen, die jeweils eine perfekte Harmonie aus Eleganz, Komfort und Panoramablick bieten.",
+                room_tag_premium: "Premium",
+                room_tag_exclusive: "Exklusiv",
+                room_tag_signature: "Signatur",
+                room1_title: "Grand Luxury Suite",
+                room1_desc: "Eine weitläufige Oase mit Designer-Möbeln, einem luxuriösen Kingsize-Bett und einem privaten Balkon, der die majestätische Morgensonne über dem azurblauen Wasser einfängt.",
+                room2_title: "Executive Meerblick",
+                room2_desc: "Erleben Sie einen gehobenen Aufenthalt in diesem exklusiven Bereich, der beispiellose Privatsphäre, erlesene Texturen, modernste Technologie und ein Spa-inspiriertes Badezimmer bietet.",
+                room3_title: "Infinity-Pool-Oase",
+                room3_desc: "Das Kronjuwel von Dali rooms. Treten Sie direkt von Ihrem luxuriösen Schlafzimmer auf ein makelloses Sonnendeck mit einem faszinierenden Infinity-Plunge-Pool, der mit dem Meereshorizont verschmilzt.",
+                room_book: "Auf Booking.com buchen",
+                
+                amenities_title: "Premium-Erlebnisse",
+                amenities_subtitle: "Über die raffinierte Eleganz Ihres Zimmers hinaus laden wir Sie ein, sich in einer erlesenen Auswahl an erstklassigen Einrichtungen zu entspannen und zu erholen.",
+                amenity1_title: "Gourmet-Küche",
+                amenity1_desc: "Genießen Sie exquisite mediterrane Köstlichkeiten, kreiert von unseren preisgekrönten Spitzenköchen.",
+                amenity2_title: "Private Yachttouren",
+                amenity2_desc: "Erkunden Sie die verborgenen Buchten und unberührten Strände von Zakynthos an Bord unserer privaten Yachten.",
+                amenity3_title: "Infinity-Lounge",
+                amenity3_desc: "Schlürfen Sie erstklassige Cocktails, während Sie die schönsten Sonnenuntergänge über dem Ionischen Meer erleben.",
+                
+                gallery_title: "Visuelle Reise",
+                gallery_subtitle: "Werfen Sie einen Blick auf die exquisite Ästhetik und Atmosphäre, die Sie im Dali rooms erwarten.",
+                gallery_all: "Alle",
+                gallery_rooms: "Zimmer",
+                gallery_facilities: "Einrichtungen",
+                gallery_views: "Aussichten",
+                
+                contact_title: "Kontaktieren Sie Uns",
+                contact_desc: "Ob Sie Ihre Reservierung sichern möchten oder maßgeschneiderte Arrangements für Ihren Aufenthalt wünschen, unser engagiertes Concierge-Team steht Ihnen gerne zur Verfügung.",
+                contact_loc: "Unser Standort",
+                contact_email_header: "Schreiben Sie uns",
+                contact_phone_header: "WhatsApp / Telefon",
+                
+                footer_cta_title: "Ihr mediterraner Rückzugsort erwartet Sie",
+                footer_cta_desc: "Erleben Sie den Inbegriff von Luxus und makelloser Gastfreundschaft auf der Insel Zakynthos.",
+                footer_cta_btn: "Sichern Sie Ihr Zimmer über Booking.com",
+                footer_brand_desc: "Inselgastfreundschaft als Kunstform. Erleben Sie mit uns auf Zakynthos ein Luxuserlebnis, das von Gelassenheit, Eleganz und unendlichem Meerblick geprägt ist.",
+                footer_links_header: "Schnelllinks",
+                footer_contact_header: "Kontakt",
+                footer_copyright: "&copy; 2026 Dali rooms Zakynthos. Alle Rechte vorbehalten.",
+                footer_privacy: "Datenschutz-Bestimmungen",
+                footer_terms: "Nutzungsbedingungen",
+
+                ai_widget_tooltip: "KI-Concierge - Online",
+                ai_widget_title: "KI-Concierge",
+                ai_welcome: "Willkommen im Dali rooms! 🌟 Ich bin Ihr virtueller KI-Concierge. Wie kann ich Ihnen heute helfen?"
+            },
+            zh: {
+                nav_home: "首页",
+                nav_about: "关于我们",
+                nav_rooms: "尊贵客房",
+                nav_amenities: "设施服务",
+                nav_gallery: "精彩瞬间",
+                nav_location: "地理位置",
+                nav_book_now: "立即预订",
+                
+                hero_title: "在 Dali rooms 体验天堂般的享受",
+                hero_subtitle: "坐拥伊奥尼亚海无尽蓝景，尊享量身定制的奢华避风港。",
+                hero_cta: "预订您的住宿",
+                
+                about_title: "款待的艺术",
+                about_subtitle: "扎金索斯岛的雅致奢华之旅",
+                about_p1: "让自己沉浸在无与伦比的地中海美景中。Dali rooms 为追求完美的人士提供专属的奢华静修所。我们精心打造的空间将现代奢华与希腊海岛生活的永恒魅力融为一体。",
+                about_p2: "在海浪的温柔吟唱中醒来，尽情享受世界一流的设施，让伊奥尼亚海令人窒息的美景成为您难忘回忆的背景。在这里，每一个细节都为您极致的舒适而量身定制。",
+                
+                rooms_title: "奢华下榻空间",
+                rooms_subtitle: "探索我们精心挑选的尊贵套房与别墅，每一处都完美融合了高雅、舒适与全景视野。",
+                room_tag_premium: "尊贵级",
+                room_tag_exclusive: "专属级",
+                room_tag_signature: "臻选级",
+                room1_title: "豪华大套房",
+                room1_desc: "宽敞舒适的静谧空间，配备设计师家具、豪华特大床以及私人阳台，将蔚蓝海面上的晨曦美景尽收眼底。",
+                room2_title: "行政海景房",
+                room2_desc: "在这里升华您的入住体验。提供无与伦比的私密性，配有高档质感装饰、前沿科技设施及水疗风独立卫浴。",
+                room3_title: "无边泳池绿洲",
+                room3_desc: "Dali rooms 的璀璨明珠。从奢华卧室直接步入阳光露台，尽享与海平线融为一体的迷人无边浸泡泳池。",
+                room_book: "立即通过 Booking.com 预订",
+                
+                amenities_title: "尊享体验",
+                amenities_subtitle: "除了雅致舒适的客房，我们还诚邀您体验一系列世界级的顶级设施，尽享极致放松与愉悦。",
+                amenity1_title: "饕餮美食",
+                amenity1_desc: "细细品味由我们屡获殊荣的行政主厨精心打造的精致地中海风味。",
+                amenity2_title: "私人游艇巡游",
+                amenity2_desc: "搭乘我们的私人游艇，探索扎金索斯岛隐秘的海湾和纯净的沙滩。",
+                amenity3_title: "无边清凉酒吧",
+                amenity3_desc: "伴着伊奥尼亚海上空最壮丽的日落落霞，啜饮我们为您精心调制的招牌鸡尾酒。",
+                
+                gallery_title: "精彩瞬间",
+                gallery_subtitle: "尽情领略 Dali rooms 独一无二的设计美学与令人陶醉的奢华氛围。",
+                gallery_all: "全部",
+                gallery_rooms: "客房",
+                gallery_facilities: "设施",
+                gallery_views: "景观",
+                
+                contact_title: "联系我们",
+                contact_desc: "无论您是准备即刻预订，还是需要为您的下榻行程进行专属定制，我们的礼宾团队都将全天候静候您的垂询。",
+                contact_loc: "我们的位置",
+                contact_email_header: "电子邮箱",
+                contact_phone_header: "微信 / 电话",
+                
+                footer_cta_title: "地中海奢华避风港静候光临",
+                footer_cta_desc: "在扎金索斯岛开启一段无可挑剔的尊贵奢华体验。",
+                footer_cta_btn: "立即通过 Booking.com 锁定房源",
+                footer_brand_desc: "将海岛款待服务升华为一门艺术。相约扎金索斯岛，开启一段由宁静、高雅和无边海景交织而成的奢华之旅。",
+                footer_links_header: "快捷链接",
+                footer_contact_header: "联络方式",
+                footer_copyright: "&copy; 2026 Dali rooms Zakynthos. 版权所有。",
+                footer_privacy: "隐私政策",
+                footer_terms: "服务条款",
+
+                ai_widget_tooltip: "AI 礼宾员 - 在线",
+                ai_widget_title: "AI 礼宾员",
+                ai_welcome: "欢迎光临 Dali rooms！🌟 我是您的 AI 虚拟礼宾。请问今天有什么可以帮您？"
+            }
+        };
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            
+            // Toggle active classes on language selectors
+            document.querySelectorAll('.lang-opt').forEach(opt => {
+                if (opt.getAttribute('data-lang-btn') === lang) {
+                    opt.classList.add('active');
+                } else {
+                    opt.classList.remove('active');
+                }
+            });
+            
+            // Translate all elements marked with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Specific UI Tooltip Adjustments
+            const tooltip = document.querySelector('.ai-tooltip');
+            if (tooltip) {
+                tooltip.textContent = translations[lang]['ai_widget_tooltip'];
+            }
+
+            // Clean & translate standard welcome node in AI Chat
+            const welcomeMsgEl = document.getElementById('welcomeMessage');
+            if (welcomeMsgEl) {
+                welcomeMsgEl.textContent = translations[lang]['ai_welcome'];
+            }
+
+            // Translate placeholder on language switch
+            const chatInput = document.getElementById('chatInput');
+            if (chatInput) {
+                if (lang === 'de') {
+                    chatInput.placeholder = "Nachricht schreiben...";
+                } else if (lang === 'zh') {
+                    chatInput.placeholder = "输入您的信息...";
+                } else {
+                    chatInput.placeholder = "Type a message...";
+                }
+            }
+
+            // Translate Gallery filter buttons
+            const allBtn = document.querySelector('[data-filter="all"]');
+            const roomsBtn = document.querySelector('[data-filter="rooms"]');
+            const facilitiesBtn = document.querySelector('[data-filter="facilities"]');
+            const viewsBtn = document.querySelector('[data-filter="views"]');
+            if (allBtn) allBtn.textContent = translations[lang]['gallery_all'];
+            if (roomsBtn) roomsBtn.textContent = translations[lang]['gallery_rooms'];
+            if (facilitiesBtn) facilitiesBtn.textContent = translations[lang]['gallery_facilities'];
+            if (viewsBtn) viewsBtn.textContent = translations[lang]['gallery_views'];
+        }
+
+        // --- 1. HEADER SCROLL EFFECT ---
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // --- 2. MOBILE MENU TOGGLE ---
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.classList.remove('active');
+                const icon = menuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // --- 3. SCROLL FADE-IN ANIMATION ---
+        const fadeElements = document.querySelectorAll('.fade-up');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const scrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Animate only once
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // --- 4. HTML5 CANVAS SHIMMER/WATER EFFECT ---
+        const canvas = document.getElementById('waterCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let width, height;
+        let particles = [];
+
+        function initCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = document.querySelector('.hero').offsetHeight;
+            particles = [];
+            
+            // Create particles
+            const particleCount = Math.floor(width * 0.05); // Responsive particle count
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 2 + 0.5,
+                    opacity: Math.random() * 0.5 + 0.1,
+                    speedY: Math.random() * 0.5 + 0.1,
+                    speedX: (Math.random() - 0.5) * 0.3,
+                    pulseRate: Math.random() * 0.02 + 0.005,
+                    pulsePhase: Math.random() * Math.PI * 2
+                });
+            }
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            
+            particles.forEach(p => {
+                // Update position (gentle upward drift like light underwater)
+                p.y -= p.speedY;
+                p.x += p.speedX;
+                
+                // Pulsing opacity for shimmer effect
+                p.pulsePhase += p.pulseRate;
+                const currentOpacity = p.opacity + (Math.sin(p.pulsePhase) * 0.2);
+                
+                // Reset if it goes off screen
+                if (p.y < -10) p.y = height + 10;
+                if (p.x < -10) p.x = width + 10;
+                if (p.x > width + 10) p.x = -10;
+
+                // Draw particle
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                // Color matches accent turquoise / white
+                ctx.fillStyle = `rgba(0, 168, 181, ${Math.max(0, currentOpacity)})`; 
+                ctx.fill();
+            });
+            
+            requestAnimationFrame(animateCanvas);
+        }
+
+        // Initialize and handle resize
+        window.addEventListener('resize', initCanvas);
+        initCanvas();
+        animateCanvas();
+
+        // --- 5. INTERACTIVE GALLERY FILTERING ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Toggle active button style
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // --- 6. AI CONCIERGE LOGIC (Free-Text Upgraded Widget) ---
+        const aiToggleBtn = document.getElementById('aiToggleBtn');
+        const aiChatWindow = document.getElementById('aiChatWindow');
+        const aiCloseBtn = document.getElementById('aiCloseBtn');
+        const chatBody = document.getElementById('chatBody');
+        const chatInput = document.getElementById('chatInput');
+        const chatSendBtn = document.getElementById('chatSendBtn');
+
+        // Toggle chat window
+        aiToggleBtn.addEventListener('click', () => {
+            aiChatWindow.classList.toggle('open');
+            // Hide tooltip once opened
+            const tooltip = aiToggleBtn.querySelector('.ai-tooltip');
+            if (tooltip) tooltip.style.display = 'none';
+
+            if (aiChatWindow.classList.contains('open')) {
+                setTimeout(() => chatInput.focus(), 300);
+            }
+        });
+
+        aiCloseBtn.addEventListener('click', () => {
+            aiChatWindow.classList.remove('open');
+        });
+
+        // Function to add a message to chat dynamically & autoscroll
+        function addMessage(text, sender) {
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('chat-msg', sender);
+            
+            if (sender === 'ai') {
+                msgDiv.innerHTML = text.replace(/\n/g, '<br>');
+            } else {
+                msgDiv.textContent = text;
+            }
+            
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        // Factual Multilingual Knowledge Database
+        const aiDatabase = {
+            en: {
+                greetings: "Hello! 🌊 Welcome to Dali rooms. How can I assist you with your luxury stay today?",
+                location: "Dali rooms is beautifully located at Lomvardou 20, Zakynthos 291 00, Greece. You can view our location on the map section below!",
+                rooms: "We offer three signature luxury spaces:<br>1. <strong>Grand Luxury Suite</strong><br>2. <strong>Executive Sea-View Villa</strong><br>3. <strong>Private Infinity Pool Oasis</strong>.<br><br>Rates start from €250/night. Please click the 'Book Now' button in the navigation bar to see live availability and lock in your dates!",
+                contact: "You can reach our human concierge team directly via WhatsApp (+30 697 481 9837) or email (georgia@dalitours-zakynthos.com). We are always here to help!",
+                amenities: "Indulge in our premium on-site experiences:<br>- Gastronomic Dining with award-winning chefs<br>- Private Yacht Tours to hidden Zakynthos coves<br>- The panoramic Infinity Lounge for signature sunset cocktails.",
+                times: "Our check-in time starts at 15:00 (3:00 PM), and check-out is until 11:00 AM. If you require flexible times, please contact our Front Desk!",
+                fallback: "I want to make sure you get the perfect answer. Let me connect you directly with our Front Desk via WhatsApp! Click the link below to chat:<br><br><a href='https://wa.me/306974819837?text=Hello%20Dali%20rooms,%20I%20have%20a%20special%20inquiry%20regarding%20my%20stay.' target='_blank' rel='noopener noreferrer' style='color:#D4AF37; font-weight:600; text-decoration:underline;'><i class='fab fa-whatsapp'></i> Chat on WhatsApp</a>"
+            },
+            de: {
+                greetings: "Hallo! 🌊 Willkommen im Dali rooms. Wie kann ich Ihnen heute bei Ihrem luxuriösen Aufenthalt behilflich sein?",
+                location: "Dali rooms befindet sich in einer wunderschönen Lage in Lomvardou 20, Zakynthos 291 00, Griechenland. Sie finden unsere genaue interaktive Karte ganz unten auf unserer Website!",
+                rooms: "Wir bieten drei exklusive Luxusunterkünfte an:<br>1. <strong>Grand Luxury Suite</strong><br>2. <strong>Executive Meerblick-Villa</strong><br>3. <strong>Infinity-Pool-Oase</strong>.<br><br>Die Preise beginnen bei 250 €/Nacht. Bitte klicken Sie in der Navigationsleiste auf 'Jetzt Buchen', um die aktuelle Verfügbarkeit zu prüfen und Ihren Aufenthalt auf Booking.com zu sichern!",
+                contact: "Sie können unser Concierge-Team direkt über WhatsApp (+30 697 481 9837) oder per E-Mail (georgia@dalitours-zakynthos.com) erreichen. Wir helfen Ihnen gerne weiter!",
+                amenities: "Genießen Sie unsere erstklassigen Erlebnisse:<br>- Gastronomisches Abendessen von preisgekrönten Köchen<br>- Private Yachttouren zu den verborgenen Buchten von Zakynthos<br>- Die atemberaubende Infinity Lounge für Cocktails bei Sonnenuntergang.",
+                times: "Der Check-in beginnt ab 15:00 Uhr und der Check-out ist bis 11:00 Uhr möglich. Wenn Sie flexible Zeiten benötigen, wenden Sie sich bitte an unsere Rezeption!",
+                fallback: "Ich möchte sicherstellen, dass Sie die perfekte Antwort erhalten. Lassen Sie mich Sie direkt per WhatsApp mit unserer Rezeption verbinden! Klicken Sie auf den folgenden Link:<br><br><a href='https://wa.me/306974819837?text=Hallo%20Dali%20rooms,%20ich%20habe%20eine%20spezielle%20Anfrage%20zu%20meinem%20Aufenthalt.' target='_blank' rel='noopener noreferrer' style='color:#D4AF37; font-weight:600; text-decoration:underline;'><i class='fab fa-whatsapp'></i> Auf WhatsApp chatten</a>"
+            },
+            zh: {
+                greetings: "您好！🌊 欢迎光临 Dali rooms。今天有什么我可以协助您安排您的奢华假期吗？",
+                location: "Dali rooms 坐落于希腊扎金索斯岛 Lomvardou 20 (邮编 291 00)。您可以在我们网站的底部找到精确的互动地图！",
+                rooms: "我们提供三种尊贵奢华房型：<br>1. <strong>豪华大套房 (Grand Luxury Suite)</strong><br>2. <strong>行政海景房 (Executive Sea-View)</strong><br>3. <strong>无边泳池绿洲 (Infinity Pool Oasis)</strong>。<br><br>房价每晚 €250 起。请点击导航栏中的“立即预订”按钮，在 Booking.com 上查看实时房态并锁定您的出行日期！",
+                contact: "您可以通过 WhatsApp (+30 697 481 9837) 或发送电子邮件 (georgia@dalitours-zakynthos.com) 直接联系我们的人工礼宾团队。我们随时准备为您提供帮助！",
+                amenities: "尽情享受地中海高品质体验：<br>- 屡获殊荣主厨操刀的饕餮餐饮<br>- 探索扎金索斯神秘海湾的私人游艇巡游<br>- 欣赏壮丽日落与招牌鸡尾酒的无边清凉酒吧",
+                times: "我们的入住时间为 15:00 起，退房时间为 11:00 前。如果您需要延迟退房或提前入住，请随时联系前台！",
+                fallback: "我想确保您能获得最满意的解答。让我为您直接接通人工前台客服！请点击下方链接进行 WhatsApp 对话：<br><br><a href='https://wa.me/306974819837?text=Hello%20Dali%20rooms,%20I%20have%20a%20special%20inquiry%20regarding%20my%20stay.' target='_blank' rel='noopener noreferrer' style='color:#D4AF37; font-weight:600; text-decoration:underline;'><i class='fab fa-whatsapp'></i> 微信/WhatsApp 咨询</a>"
+            }
+        };
+
+        function getAIResponse(userInput, lang) {
+            const text = userInput.toLowerCase().trim();
+            const db = aiDatabase[lang] || aiDatabase['en'];
+
+            // Semantic multi-language matching database definition
+            const keywords = {
+                greetings: {
+                    en: ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "welcome"],
+                    de: ["hallo", "hi", "guten tag", "grüß gott", "guten morgen", "guten abend", "willkommen"],
+                    zh: ["你好", "您好", "哈罗", "早上好", "下午好", "在吗", "欢迎"]
+                },
+                location: {
+                    en: ["location", "address", "where", "how to get", "map", "gps", "direction", "directions", "island", "zakynthos", "greece", "lomvardou"],
+                    de: ["lage", "adresse", "wo ist", "wo befindet", "karte", "standort", "wegbeschreibung", "insel", "griechenland", "lomvardou"],
+                    zh: ["地址", "在哪", "位置", "地图", "怎么去", "路线", "希腊", "扎金索斯", "岛"]
+                },
+                rooms: {
+                    en: ["room", "rooms", "price", "prices", "rate", "rates", "cost", "suite", "suites", "villa", "accommodations", "book", "reserve", "reservation", "money", "how much"],
+                    de: ["zimmer", "preis", "preise", "kosten", "suite", "suiten", "villa", "unterkunft", "unterkünfte", "buchen", "reservierung", "geld", "wie viel"],
+                    zh: ["房间", "价格", "套房", "别墅", "多少钱", "费用", "房型", "预订", "预定", "房价"]
+                },
+                contact: {
+                    en: ["contact", "phone", "whatsapp", "email", "front desk", "concierge", "human", "support", "talk to", "call", "mail", "number"],
+                    de: ["kontakt", "telefon", "whatsapp", "e-mail", "rezeption", "hilfe", "mensch", "kontaktieren", "rufen", "nummer", "mailen"],
+                    zh: ["联系", "电话", "微信", "邮箱", "前台", "人工", "支持", "客服", "号码", "手机", "写信"]
+                },
+                amenities: {
+                    en: ["amenities", "pool", "dining", "yacht", "experiences", "food", "restaurant", "bar", "lounge", "spa", "activities", "sunset", "drink", "drinks", "cocktail"],
+                    de: ["ausstattung", "pool", "essen", "yacht", "restaurant", "bar", "lounge", "erlebnisse", "aktivitäten", "abendessen", "getränk", "getränke", "cocktail"],
+                    zh: ["设施", "游艇", "餐厅", "酒吧", "泳池", "餐饮", "体验", "活动", "水疗", "日落", "饮料", "鸡尾酒"]
+                },
+                times: {
+                    en: ["check-in", "check-out", "check in", "check out", "time", "times", "hours", "hour", "clock", "arrive", "depart"],
+                    de: ["einchecken", "auschecken", "check-in", "check-out", "zeit", "zeiten", "uhrzeit", "uhr", "stunden", "ankunft", "abreise"],
+                    zh: ["入住", "退房", "时间", "几点", "小时", "到达", "离开"]
+                }
+            };
+
+            function matchesCategory(category) {
+                const activeKeywords = keywords[category][lang] || [];
+                if (activeKeywords.some(keyword => text.includes(keyword))) {
+                    return true;
+                }
+                for (const otherLang in keywords[category]) {
+                    if (otherLang !== lang) {
+                        const fallbackKeywords = keywords[category][otherLang];
+                        if (fallbackKeywords.some(keyword => text.includes(keyword))) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
+            if (matchesCategory('location')) return db.location;
+            if (matchesCategory('rooms')) return db.rooms;
+            if (matchesCategory('contact')) return db.contact;
+            if (matchesCategory('amenities')) return db.amenities;
+            if (matchesCategory('times')) return db.times;
+            if (matchesCategory('greetings')) return db.greetings;
+
+            return db.fallback;
+        }
+
+        function handleSendMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            addMessage(text, 'user');
+            chatInput.value = '';
+
+            // Premium visual delay simulation for response delivery
+            setTimeout(() => {
+                const response = getAIResponse(text, currentLang);
+                addMessage(response, 'ai');
+            }, 600);
+        }
+
+        chatSendBtn.addEventListener('click', handleSendMessage);
+        chatInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleSendMessage();
+            }
+        });
+
+        // --- DYNAMIC CONTENT LOADING FROM DATABASE ---
+        (async function loadDynamicConfig() {
+            try {
+                const res = await fetch('/api/site-config');
+                if (!res.ok) return;
+                const data = await res.json();
+
+                if (data.translations) {
+                    for (const lang of Object.keys(data.translations)) {
+                        if (translations[lang]) {
+                            Object.assign(translations[lang], data.translations[lang]);
+                        } else {
+                            translations[lang] = data.translations[lang];
+                        }
+                    }
+                }
+
+                if (data.settings) {
+                    const waNum = data.settings.whatsapp_number;
+                    const waDisplay = data.settings.whatsapp_display;
+                    if (waNum) {
+                        const waUrl = 'https://wa.me/' + waNum + '?text=Hello%20Dali%20rooms,%20I%20would%20like%20to%20inquire%20about%20a%20reservation.';
+                        const waUrlSimple = 'https://wa.me/' + waNum;
+
+                        var el;
+                        el = document.getElementById('waFloatBtn');
+                        if (el) el.href = waUrl;
+                        el = document.getElementById('waContactLink');
+                        if (el) el.href = waUrl;
+                        el = document.getElementById('waFooterLink');
+                        if (el) el.href = waUrlSimple;
+                        el = document.getElementById('waFooterListLink');
+                        if (el) el.href = waUrlSimple;
+                    }
+                    if (waDisplay) {
+                        var d;
+                        d = document.getElementById('waContactDisplay');
+                        if (d) d.textContent = waDisplay;
+                        d = document.getElementById('waFooterListDisplay');
+                        if (d) d.textContent = waDisplay;
+                    }
+
+                    const price = data.settings.room_price_base;
+                    const curr = data.settings.room_price_currency || 'EUR';
+                    const sym = curr === 'USD' ? '$' : curr === 'GBP' ? '£' : '€';
+                    if (price && aiDatabase) {
+                        if (aiDatabase.en && aiDatabase.en.rooms) {
+                            aiDatabase.en.rooms = aiDatabase.en.rooms.replace(/€\d+/g, sym + price);
+                        }
+                        if (aiDatabase.de && aiDatabase.de.rooms) {
+                            aiDatabase.de.rooms = aiDatabase.de.rooms.replace(/\d+\s*€/g, price + ' ' + sym);
+                        }
+                        if (aiDatabase.zh && aiDatabase.zh.rooms) {
+                            aiDatabase.zh.rooms = aiDatabase.zh.rooms.replace(/€\d+/g, sym + price);
+                        }
+                    }
+
+                    if (waNum && aiDatabase) {
+                        for (const lang of ['en', 'de', 'zh']) {
+                            if (aiDatabase[lang]) {
+                                if (aiDatabase[lang].contact) {
+                                    aiDatabase[lang].contact = aiDatabase[lang].contact.replace(/\+30\s*697\s*481\s*9837/, waDisplay || ('+' + waNum));
+                                }
+                                if (aiDatabase[lang].fallback) {
+                                    aiDatabase[lang].fallback = aiDatabase[lang].fallback.replace(/306974819837/g, waNum);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                setLanguage(currentLang);
+            } catch (e) {
+                // Silently fall back to hardcoded values
+            }
+        })();
+
+        // Set initial placeholder values
+        setLanguage('en');
+
+    </script>
+</body>
+</html>

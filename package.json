@@ -1,0 +1,15 @@
+{
+  "name": "dalirooms",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@netlify/database": "^0.7.0",
+    "@netlify/functions": "^3.0.0",
+    "drizzle-orm": "^0.44.2-beta"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.1-beta",
+    "typescript": "^5.7.0"
+  }
+}
